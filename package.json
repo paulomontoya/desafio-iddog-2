@@ -1,0 +1,23 @@
+{
+  "name": "desafio-iddog-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:paulomontoya/desafio-iddog-2.git",
+  "author": "Paulo Montoya <paulo@paulomontoya.com.br>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "express": "^4.17.1",
+    "formik": "^1.5.7",
+    "next": "^8.1.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "yup": "^0.27.0"
+  }
+}

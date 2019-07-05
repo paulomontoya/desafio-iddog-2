@@ -1,0 +1,37 @@
+@keyframes shake {
+  25% {
+    transform: translate3d(-5px, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+  75% {
+    transform: translate3d(5px, 0, 0);
+  }
+}
+
+.HomeForm {
+  form {
+    input {
+      padding: 6px;
+      width: 100%;
+      outline: 0;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+}
+.HomeFormInputError {
+  border: 1px solid #aa2121;
+  animation: shake 0.2s linear;
+  animation-iteration-count: 2;
+}
+.inputFeedback {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  height: 1rem;
+}
+.signupError {
+  color: #aa2021;
+  margin-bottom: 10px;
+}
