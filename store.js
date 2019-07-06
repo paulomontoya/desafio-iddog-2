@@ -4,8 +4,8 @@ import axios from "axios";
 import { Router } from "./routes";
 
 const UserStore = observable({
-  email: "",
   isLoading: false,
+  email: "",
   error: "",
   token: "",
 
@@ -19,16 +19,20 @@ const UserStore = observable({
         email
       })
       .then(response => {
-        UserStore.isLoading = false;
         UserStore.email = response.data.user.email;
         UserStore.token = response.data.user.token;
-        Router.pushRoute("feed");
-        // TODO: CHANGE HREF
-        // dispatch(push("/feed"));
+        UserStore.error = "";
+        setTimeout(() => {
+          // To animate dog icon
+          UserStore.isLoading = false;
+          Router.pushRoute("feed");
+        }, 2000);
       })
       .catch(response => {
-        console.log("UserStore error", UserStore);
-        UserStore.error = response;
+        UserStore.isLoading = false;
+        UserStore.email = "";
+        UserStore.token = "";
+        UserStore.error = response.message;
       });
   }
 });

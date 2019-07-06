@@ -7,14 +7,12 @@ const HomeForm = props => (
     <Formik
       initialValues={{ email: "" }}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          props.submitCallback(values.email);
-          setSubmitting(false);
-        }, 500);
+        props.submitCallback(values.email);
+        setSubmitting(false);
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string()
-          .email("Doesn't look like an email to me")
+          .email("Invalid email")
           .required("Sorry, but you need to fill this out")
       })}
     >
@@ -41,7 +39,6 @@ const HomeForm = props => (
                 errors.email && touched.email && css.HomeFormInputError
               }
             />
-
             <div className={css.inputFeedback}>{errors.email}</div>
           </form>
         );
