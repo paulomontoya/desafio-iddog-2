@@ -2,13 +2,13 @@ import css from "./HomeForm.scss";
 import * as Yup from "yup";
 import { Formik } from "formik";
 
-const HomeForm = () => (
+const HomeForm = props => (
   <div className={css.HomeForm}>
     <Formik
       initialValues={{ email: "" }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          console.log("submit", values.email);
+          props.submitCallback(values.email);
           setSubmitting(false);
         }, 500);
       }}
