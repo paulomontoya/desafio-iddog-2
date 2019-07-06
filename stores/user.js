@@ -1,9 +1,8 @@
 import { observable } from "mobx";
-import { createContext } from "react";
 import axios from "axios";
-import { Router } from "./routes";
+import { Router } from "../routes";
 
-const UserStore = observable({
+export const UserStore = observable({
   isLoading: false,
   email: "",
   error: "",
@@ -36,5 +35,3 @@ const UserStore = observable({
       });
   }
 });
-
-export const UserStoreContext = createContext(UserStore);
