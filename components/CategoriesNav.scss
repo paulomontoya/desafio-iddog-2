@@ -1,0 +1,47 @@
+.CategoriesNav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 24px auto;
+
+  > a {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    color: #717171;
+    text-decoration: none;
+    outline: 0;
+    transition: 0.2s color;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 1px;
+      border-top: 1px solid #000;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.2s width;
+    }
+    &:focus::after,
+    &:hover::after {
+      width: 60%;
+    }
+    &:focus,
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .LinkActive {
+    font-weight: 700;
+    pointer-events: none;
+    color: #000;
+
+    &::after {
+      width: 60%;
+    }
+  }
+}

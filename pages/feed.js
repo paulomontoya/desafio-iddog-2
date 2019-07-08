@@ -1,13 +1,23 @@
 import css from "./feed.scss";
 import { useObserver } from "mobx-react-lite";
 import { useContext } from "react";
-import { UserStoreContext } from "../store";
+import { UserStoreContext, DogsStoreContext } from "../stores";
+import Navigation from "../components/CategoriesNav";
 
 const Feed = () => {
   const UserStore = useContext(UserStoreContext);
+  const DogsStore = useContext(DogsStoreContext);
 
   return useObserver(() => (
-    <div className={css.FeedPage}>{UserStore.token}</div>
+    <div className={css.FeedPage}>
+      <header>
+        <h1>
+          The <span>IDDog</span>
+        </h1>
+      </header>
+
+      <Navigation />
+    </div>
   ));
 };
 

@@ -2,4 +2,21 @@
 
 .FeedPage {
   display: block;
+  padding: 15px;
+  text-align: center;
+
+  header {
+    margin-top: 40px;
+    text-transform: uppercase;
+
+    h1 {
+      font-weight: 100;
+      text-transform: uppercase;
+      margin: 0 0 15px 0;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
 }
