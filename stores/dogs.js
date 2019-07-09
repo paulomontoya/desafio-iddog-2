@@ -4,5 +4,6 @@ import { Router } from "../routes";
 
 export const DogsStore = observable({
   isLoading: false,
-  error: ""
+  error: "",
+  currentCategory: ""
 });

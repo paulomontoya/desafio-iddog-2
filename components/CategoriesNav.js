@@ -1,32 +1,22 @@
 import css from "./CategoriesNav.scss";
-import { useRouter } from "next/router";
+import { Link } from "../routes";
 
-const CategoriesNav = props => {
+const CategoriesNav = ({ currentCategory }) => {
+  const categories = ["husky", "hound", "pug", "labrador"];
+
   return (
     <nav className={css.CategoriesNav}>
-      <ActiveLink href="/feed?category=husky">husky</ActiveLink>
-      <ActiveLink href="/feed?category=hound">hound</ActiveLink>
-      <ActiveLink href="/feed?category=pug">pug</ActiveLink>
-      <ActiveLink href="/feed?category=labrador">labrador</ActiveLink>
+      {categories.map(category => {
+        return (
+          <Link href={`/feed?category=${category}`} key={category}>
+            <a className={category === currentCategory ? css.LinkActive : ""}>
+              {category}
+            </a>
+          </Link>
+        );
+      })}
     </nav>
   );
-
-  function ActiveLink({ children, href }) {
-    // Adapted from https://nextjs.org/docs#userouter
-    const router = useRouter();
-    const className = router.asPath === href ? css.LinkActive : "";
-
-    const handleClick = e => {
-      e.preventDefault();
-      router.push(href);
-    };
-
-    return (
-      <a href={href} onClick={handleClick} className={className}>
-        {children}
-      </a>
-    );
-  }
 };
 
 export default CategoriesNav;
