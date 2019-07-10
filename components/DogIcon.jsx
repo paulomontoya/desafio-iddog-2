@@ -1,3 +1,4 @@
+import React from "react";
 import css from "./DogIcon.scss";
 import { useTransition, animated } from "react-spring";
 

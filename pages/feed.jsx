@@ -1,6 +1,6 @@
 import css from "./feed.scss";
 import { useObserver } from "mobx-react-lite";
-import { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { UserStoreContext, DogsStoreContext } from "../stores";
 import CategoriesNav from "../components/CategoriesNav";
 import TokenPersister from "../components/TokenPersister";

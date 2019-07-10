@@ -1,5 +1,5 @@
 import css from "./DogImage.scss";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const DogImage = ({ imageURL, onClick }) => {
   const [loaded, setLoaded] = useState(false);

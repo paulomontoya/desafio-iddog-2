@@ -1,3 +1,4 @@
+import React from "react";
 import css from "./CategoriesNav.scss";
 import { Link } from "../routes";
 

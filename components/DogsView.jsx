@@ -1,3 +1,4 @@
+import React from "react";
 import css from "./DogsView.scss";
 import LoadingSpinner from "./LoadingSpinner";
 import DogImage from "./DogImage";

@@ -1,8 +1,8 @@
 import LoadingSpinner from "../components/LoadingSpinner";
 import HomeForm from "../components/HomeForm";
 import css from "./index.scss";
-import { useObserver, observer } from "mobx-react-lite";
-import { useContext } from "react";
+import { useObserver } from "mobx-react-lite";
+import React, { useContext } from "react";
 import { UserStoreContext } from "../stores";
 import { useTransition, animated } from "react-spring";
 import DogIcon from "../components/DogIcon";
