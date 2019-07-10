@@ -40,10 +40,11 @@ const Feed = ({ currentCategory, selectedIndex }) => {
             list={DogsStore.list}
             isLoading={DogsStore.isLoading}
             category={DogsStore.currentCategory}
+            error={DogsStore.error}
           />
         </div>
 
-        {DogsStore.list.length && (
+        {DogsStore.list.length > 0 && (
           <DogModal
             imageURL={DogsStore.list[DogsStore.selectedIndex] || undefined}
             onClick={() => {

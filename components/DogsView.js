@@ -3,11 +3,12 @@ import LoadingSpinner from "./LoadingSpinner";
 import DogImage from "./DogImage";
 import { Router } from "../routes";
 
-const DogsView = ({ list, isLoading, category }) => {
+const DogsView = ({ list, isLoading, category, error }) => {
   return isLoading ? (
     <LoadingSpinner style={{ marginTop: 40 }} />
   ) : (
     <div className={css.DogsView}>
+      {error && <div className={css.DogsViewError}>{error}</div>}
       {list.map((item, index) => {
         return (
           <DogImage
