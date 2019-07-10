@@ -1,12 +1,12 @@
 import css from "./DogImage.scss";
 import { useState } from "react";
 
-const DogImage = ({ imageURL }) => {
+const DogImage = ({ imageURL, onClick }) => {
   const [loaded, setLoaded] = useState(false);
   const className = `${css.DogImage} ${loaded ? css.ImageLoaded : ""}`;
 
   return (
-    <div className={className}>
+    <div className={className} onClick={onClick}>
       <figure>
         <img src={imageURL} onLoad={() => setLoaded(true)} />
       </figure>

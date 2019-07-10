@@ -6,6 +6,7 @@ export const DogsStore = observable({
   error: "",
   currentCategory: "",
   list: [],
+  selectedIndex: 0,
 
   getList: token => {
     const category = DogsStore.currentCategory;
