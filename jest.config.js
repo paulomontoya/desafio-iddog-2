@@ -3,6 +3,6 @@ module.exports = {
   testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
   transform: {
     "^.+\\.(js|jsx)$": "babel-jest",
-    "^.+\\.scss$": "<rootDir>/jest.fileTransformer.js"
+    "^.+\\.scss$": "jest-transform-css"
   }
 };
