@@ -16,7 +16,6 @@ const Feed = ({ currentCategory, selectedIndex }) => {
   DogsStore.currentCategory = currentCategory;
 
   useEffect(() => {
-    console.log("useEffect current category");
     DogsStore.getList(UserStore.token);
   }, [currentCategory]);
 
