@@ -20,7 +20,7 @@ export default class MyApp extends App {
       <Container>
         <Head>
           <title>THE IDDOG ~ paulomontoya</title>
-          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
         </Head>
         <Component {...pageProps} />
       </Container>
