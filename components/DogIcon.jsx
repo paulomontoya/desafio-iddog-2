@@ -13,7 +13,11 @@ const DogIcon = props => {
       {transitions.map(({ item, key, props }) =>
         item ? (
           <animated.div className={css.DogIcon} style={props} key={key}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+              id="withCollarSVG"
+            >
               <path
                 fill="#D99E82"
                 d="M28.048 33.061c3.843 1.9 6.261-2.333 4.773-4.752-1.204-1.957-3.696-1.547-3.256-2.047.698-.791 2.665-1.138 4.558.093 1.86 1.209 2.372 5.116.512 7.07-1.59 1.67-6.038 2.588-8.512-.326-4.719-5.558-1.273-1.619 1.925-.038z"
@@ -82,7 +86,11 @@ const DogIcon = props => {
           </animated.div>
         ) : (
           <animated.div className={css.DogIcon} style={props} key={key}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+              id="withoutCollarSVG"
+            >
               <path
                 fill="#D99E82"
                 d="M31.034 14.374c3.508-.65 3.587-6.297-.051-6.254-2.847.034-2.56 2.795-2.945 2.252-.748-1.055-.989-3.769 1.862-4.894 2.461-.971 5.846.996 6.063 4.591.139 2.302-1.297 6.554-6.453 5.846-7.222-.991-1.983-.892 1.524-1.541z"
