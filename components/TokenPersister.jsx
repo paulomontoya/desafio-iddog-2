@@ -8,7 +8,7 @@ const TokenPersister = ({ children, currentToken }) => {
 
   useEffect(() => {
     if (currentToken) {
-      window.localStorage.setItem("di-token", UserStore.token);
+      window.localStorage.setItem("di-token", currentToken);
     }
     UserStore.token = window.localStorage.getItem("di-token");
     if (!UserStore.token) {
@@ -16,7 +16,7 @@ const TokenPersister = ({ children, currentToken }) => {
     }
   }, []);
 
-  return UserStore.token ? (
+  return currentToken ? (
     children
   ) : (
     <LoadingSpinner
