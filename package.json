@@ -13,6 +13,18 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/enzyme.setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  },
   "dependencies": {
     "@babel/core": "^7.5.4",
     "@zeit/next-sass": "^1.0.1",
@@ -26,8 +38,8 @@
     "eslint-plugin-react": "^7.14.2",
     "express": "^4.17.1",
     "formik": "^1.5.7",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
-    "jest-transform-css": "^2.0.0",
     "lodash": "^4.17.11",
     "mobx": "^5.11.0",
     "mobx-react-lite": "^1.4.1",
