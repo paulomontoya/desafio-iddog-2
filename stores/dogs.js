@@ -11,6 +11,8 @@ export const DogsStore = observable({
   getList: token => {
     const category = DogsStore.currentCategory;
     if (!category) {
+      DogsStore.list = [];
+      DogsStore.error = "No category specified";
       return;
     }
 

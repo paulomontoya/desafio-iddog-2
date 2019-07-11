@@ -33,6 +33,15 @@ describe("DogsStore", () => {
       DogsStore.currentCategory = "";
     });
 
+    it("without category", () => {
+      DogsStore.currentCategory = "";
+      DogsStore.getList("token__jest");
+
+      expect(DogsStore.isLoading).toBe(false);
+      expect(DogsStore.list.length).toBe(0);
+      expect(DogsStore.error).toBe("No category specified");
+    });
+
     itv("list success", processRequests => {
       const mock = new MockAdapter(axios);
       mock
