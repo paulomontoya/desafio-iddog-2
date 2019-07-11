@@ -30,7 +30,7 @@ const HomeForm = props => (
           <form onSubmit={handleSubmit}>
             <input
               id="email"
-              type="text"
+              type="email"
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
