@@ -4,6 +4,8 @@
 
 This project uses Mobx, NextJS, Express, React, Jest, Enzyme, Axios, ESLint and it's deployed with Now.
 
+<img src="https://github.com/paulomontoya/desafio-iddog-2/blob/master/demonstration.gif?raw=true" />
+
 ## Installation
 
 To install all dependencies, run:
